@@ -26,17 +26,25 @@ function createCard(product) {
   const cardTitle = document.createElement("h5");
   cardTitle.className = "card-title";
   cardTitle.textContent = product.title;
+  
   const cardDesc = document.createElement("a");
   cardDesc.className="card-text";
   cardDesc.textContent=product.desc;
+  cardDesc.href=product.curl;
 
   const cardDate = document.createElement("p");
   cardDate.className="text-body-secondary";
   cardDate.textContent=product.date;
 
+  const cardAuthor = document .createElement("p");
+  cardAuthor.className="text-body-secondary";
+  cardAuthor.textContent=product.author;
+
   cardBody.appendChild(cardTitle);
-  cardBody.appendChild(cardDesc);
   cardBody.appendChild(cardDate);
+  cardBody.appendChild(cardDesc);
+  cardBody.appendChild(cardAuthor);
+  
 
 
 

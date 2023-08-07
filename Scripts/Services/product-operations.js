@@ -12,7 +12,8 @@ export default async function readAllProducts() {
         art.title,
         art.description,
         art.urlToImage,
-        art.publishedAt
+        art.publishedAt,
+        art.url
       );
       return newsObject;
     });
