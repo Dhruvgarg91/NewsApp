@@ -1,7 +1,7 @@
 // Network Call Code
 export default async function doNetworkCall() {
-  const apiKey = "eb79e9ea25b04316adbb685c6fc98dc2"; // Replace with your NewsAPI API key
-  const URL = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apiKey}`
+
+  const URL = "https://gist.githubusercontent.com/Dhruvgarg91/4883c51408529d96af16175b50051cba/raw/afc2580d54eb8c7da011b56b4efff8ce5b28109b/news.json";
   try {
     const response = await fetch(URL);
     const object = await response.json();
