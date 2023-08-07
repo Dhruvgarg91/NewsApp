@@ -5,17 +5,18 @@ import doNetworkCall from "./api-client.js";
 export default async function readAllProducts() {
   try {
     const obj = await doNetworkCall();
-    const pizzas = obj["Vegetarian"];
-    const pizzaArray = pizzas.map((pizza) => {
-      const pizzaObject = new Product(
-        pizza.id,
-        pizza.name,
-        pizza.price,
-        pizza.url
+    const newsArray = obj["articles"];
+    const productArray = newsArray.map((art) => {
+      const newsObject = new Product(
+        art.author,
+        art.title,
+        art.description,
+        art.urlToImage,
+        art.publishedAt
       );
-      return pizzaObject;
+      return newsObject;
     });
-    return pizzaArray;
+    return productArray;
   } catch (err) {
     throw err;
   }
