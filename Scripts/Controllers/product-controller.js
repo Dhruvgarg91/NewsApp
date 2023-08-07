@@ -74,7 +74,6 @@ function searchProducts() {
     if (filteredProducts.length === 0) {
       cardContainerElement.innerHTML = `
         <div class="text-center">
-          <img src="https://orig00.deviantart.net/b914/f/2016/016/1/1/goku_eating_by_alexiscabo1-d9o7wms.png" alt="No Results" height="50%">
           <h2>None found</h2>
         </div>`;
     } else {
